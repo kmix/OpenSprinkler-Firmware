@@ -24,10 +24,10 @@ else
 	echo "Installing required libraries..."
 	apt-get update
 	apt-get install -y libmosquitto-dev
-	apt-get install -y raspi-gpio
-	if ! command -v raspi-gpio &> /dev/null
+	apt-get install -y wiringpi
+	if ! command -v gpio &> /dev/null
 	then
-		echo "Command raspi-gpio is required and is not installed"
+		echo "wiringpi is required and is not installed"
 		exit 0
 	fi
 	echo "Compiling firmware..."

@@ -285,7 +285,7 @@ void pinMode(int pin, byte mode) {
 	if(mode==INPUT_PULLUP) {
 		char cmd[BUFFER_MAX];
 		//snprintf(cmd, BUFFER_MAX, "gpio -g mode %d up", pin);
-		snprintf(cmd, BUFFER_MAX, "raspi-gpio set %d pu", pin);
+		snprintf(cmd, BUFFER_MAX, "gpio -g mode %d up", pin);
 		system(cmd);
 	}
 #endif
